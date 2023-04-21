@@ -1,0 +1,152 @@
+/* Write your CSS here */
+.app-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.content-container {
+  width: 350px;
+}
+.manager-details-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png');
+  background-size: cover;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.manager-name {
+  font-size: 20px;
+  color: #1e293b;
+  font-family: 'Roboto';
+}
+.welcome-message {
+  font-size: 10px;
+  font-family: 'Roboto';
+}
+.welcome-message-span-text {
+  color: #0b69ff;
+}
+@media screen and (min-width: 768px) {
+  .content-container {
+    width: 750px;
+  }
+  .manager-details-container {
+    text-align: start;
+    padding-left: 30px;
+  }
+  .manager-name {
+    font-size: 25px;
+  }
+  .welcome-message {
+    font-size: 15px;
+  }
+}
+
+.transaction-history-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.transaction-container {
+  border: 2px solid #d7dfe9;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .transaction-history-container {
+    flex-direction: row;
+  }
+  .transaction-container {
+    margin-right: 30px;
+  }
+}
+.heading {
+  font-size: 15px;
+  font-family: 'Roboto';
+  color: #475569;
+  margin-top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+}
+.label {
+  font-size: 8px;
+  color: #7e858e;
+  font-family: 'Roboto';
+  font-size: 500;
+}
+.input {
+  height: 30px;
+  width: 250px;
+  margin-top: 4px;
+  font-size: 8px;
+  outline: none;
+  padding-left: 5px;
+  color: #7e858e;
+}
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 10px;
+  }
+  .input {
+    font-size: 10px;
+  }
+}
+
+.amount-input-container {
+  margin-top: 5px;
+}
+.add-button {
+  color: #ffffff;
+  background-color: #0b69ff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border-width: 0px;
+  font-size: 12px;
+}
+
+.history-container {
+  border: 2px solid #d7dfe9;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .history-container {
+    margin-top: 0px;
+  }
+}
+.history-list-headings-container {
+  list-style-type: none;
+  display: flex;
+  padding-left: 0px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid #d7dfe9;
+  font-family: 'Roboto';
+  margin-bottom: 0px;
+}
+.history-list-heading {
+  width: 80px;
+  color: #1e293b;
+  font-weight: bold;
+  font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+  .history-list-heading {
+    font-size: 12px;
+    width: 100px;
+  }
+}

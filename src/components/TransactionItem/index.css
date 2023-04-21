@@ -1,0 +1,41 @@
+/* Write your CSS here */
+
+.money-information-container {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid #d7dfe9;
+  font-family: 'Roboto';
+  margin-top: 0px;
+  border-top: 0px;
+  margin-bottom: 0px;
+}
+.money-info {
+  width: 80px;
+  color: #7e858e;
+  font-size: 10px;
+}
+@media screen and (min-width: 768px) {
+  .money-info {
+    width: 100px;
+    font-size: 12px;
+  }
+}
+.delete-img {
+  width: 15px;
+  height: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+.delete-button {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+  outline: none;
+  margin: 0px;
+  padding: 0px;
+}
