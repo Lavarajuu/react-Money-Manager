@@ -8,12 +8,14 @@ const MoneyDetails = props => {
       <div className="your-balance-container">
         <img
           className="image"
-          alt="income"
+          alt="balance"
           src="https://assets.ccbp.in/frontend/react-js/money-manager/balance-image.png"
         />
         <div className="money-type-container">
           <p className="money-type">Your Balance</p>
-          <p className="money">Rs {yourBalance}</p>
+          <p className="money" data-testid="balanceAmount">
+            Rs {yourBalance}
+          </p>
         </div>
       </div>
 
@@ -25,7 +27,9 @@ const MoneyDetails = props => {
         />
         <div className="money-type-container">
           <p className="money-type">Your Income</p>
-          <p className="money">Rs {yourIncome}</p>
+          <p className="money" data-testid="incomeAmount">
+            Rs {yourIncome}
+          </p>
         </div>
       </div>
 
@@ -37,7 +41,9 @@ const MoneyDetails = props => {
         />
         <div className="money-type-container">
           <p className="money-type">Your Expenses</p>
-          <p className="money">Rs {yourExpenses}</p>
+          <p className="money" data-testid="expensesAmount">
+            Rs {yourExpenses}
+          </p>
         </div>
       </div>
     </div>

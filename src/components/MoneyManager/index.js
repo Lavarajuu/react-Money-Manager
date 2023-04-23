@@ -59,7 +59,7 @@ class MoneyManager extends Component {
       ],
       title: '',
       amount: '',
-      amountType: '',
+      amountType: 'Income',
     }))
 
     if (amountType === 'Income') {
@@ -67,7 +67,7 @@ class MoneyManager extends Component {
         yourBalance: prevState.yourBalance + parseInt(amount),
         yourIncome: prevState.yourIncome + parseInt(amount),
       }))
-    } else if (amountType === 'Expenses') {
+    } else {
       this.setState(prevState => ({
         yourBalance: prevState.yourBalance - parseInt(amount),
         yourExpenses: prevState.yourExpenses + parseInt(amount),
@@ -88,16 +88,18 @@ class MoneyManager extends Component {
     const deletedTransaction = amountTransactionDetails.filter(
       eachTransaction => eachTransaction.id === id,
     )
+    const {amount, amountType} = deletedTransaction[0]
 
-    if (deletedTransaction.amountType === 'Income') {
+    if (amountType === 'Income') {
       this.setState(prevState => ({
-        yourIncome: prevState.yourIncome - deletedTransaction.amount,
-        yourBalance: prevState.yourBalance - deletedTransaction.amount,
+        yourIncome: prevState.yourIncome - parseInt(amount),
+        yourBalance: prevState.yourBalance - parseInt(amount),
+        yourExpenses: prevState.yourExpenses,
       }))
     } else {
       this.setState(prevState => ({
-        yourExpenses: prevState.yourExpenses - deletedTransaction.amount,
-        yourBalance: prevState.yourBalance + deletedTransaction.amount,
+        yourExpenses: prevState.yourExpenses - parseInt(amount),
+        yourBalance: prevState.yourBalance + parseInt(amount),
       }))
     }
   }
@@ -193,11 +195,11 @@ class MoneyManager extends Component {
 
             <div className="history-container">
               <h1 className="heading">History</h1>
-              <ul className="history-list-headings-container">
-                <li className="history-list-heading">Title</li>
-                <li className="history-list-heading">Amount</li>
-                <li className="history-list-heading">Type</li>
-              </ul>
+              <div className="history-list-headings-container">
+                <p className="history-list-heading">Title</p>
+                <p className="history-list-heading">Amount</p>
+                <p className="history-list-heading">Type</p>
+              </div>
 
               {amountTransactionDetails.map(amountDetails => (
                 <TransactionItem

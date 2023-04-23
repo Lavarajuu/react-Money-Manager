@@ -128,12 +128,9 @@
   }
 }
 .history-list-headings-container {
-  list-style-type: none;
   display: flex;
-  padding-left: 0px;
+  padding: 0px;
   padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   border: 2px solid #d7dfe9;
   font-family: 'Roboto';
   margin-bottom: 0px;
