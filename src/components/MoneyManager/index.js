@@ -94,7 +94,6 @@ class MoneyManager extends Component {
       this.setState(prevState => ({
         yourIncome: prevState.yourIncome - parseInt(amount),
         yourBalance: prevState.yourBalance - parseInt(amount),
-        yourExpenses: prevState.yourExpenses,
       }))
     } else {
       this.setState(prevState => ({
